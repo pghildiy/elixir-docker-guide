@@ -18,7 +18,7 @@ RUN export MIX_ENV=prod && \
 RUN ls _build/prod/rel/clock/
 
 #Extract Release archive to /rel for copying in next stage
-RUN APP_NAME="MY_APP_NAME" && \
+RUN APP_NAME="clock" && \
     RELEASE_DIR=`ls -d _build/prod/rel/$APP_NAME/releases/*/` && \
     mkdir /export && \
     tar -xf "$RELEASE_DIR/$APP_NAME.tar.gz" -C /export
