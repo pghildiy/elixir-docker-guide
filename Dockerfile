@@ -6,6 +6,9 @@ FROM bitwalker/alpine-elixir:1.5 as build
 #Copy the source folder into the Docker image
 COPY . .
 
+RUN pwd
+RUN ls
+
 #Install dependencies and build Release
 RUN export MIX_ENV=prod && \
     rm -Rf _build && \
