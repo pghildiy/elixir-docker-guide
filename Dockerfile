@@ -14,6 +14,8 @@ RUN export MIX_ENV=prod && \
     rm -Rf _build && \
     mix deps.get && \
     mix release
+    
+RUN ls _build/prod/rel/
 
 #Extract Release archive to /rel for copying in next stage
 RUN APP_NAME="MY_APP_NAME" && \
