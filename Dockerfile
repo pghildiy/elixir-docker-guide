@@ -15,7 +15,7 @@ RUN export MIX_ENV=prod && \
     mix deps.get && \
     mix release
     
-RUN ls _build/prod/rel/
+RUN ls _build/prod/rel/clock/
 
 #Extract Release archive to /rel for copying in next stage
 RUN APP_NAME="MY_APP_NAME" && \
